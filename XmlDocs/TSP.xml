@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<doc>
+    <members>
+        <member name="PrintRoute">
+            <summary>
+                prints array in form of "The Route is as follows: [start] -> [array0] -> ... -> [array.Length] -> [start]  
+            </summary>
+            <param name="route">array of given vertices</param>
+            <param name="start">start vertex</param>
+        </member>
+        <member name="MatrixRndSym">
+            <summary>generates and returns a symmetric matrix with the dimensions NxN with the varaibles between [1,range]</summary>
+            <param name="n">Dimensions of the matrix</param>
+            <param name="range">random numbers [1,range]</param>
+        </member>
+    </members>
+</doc>
