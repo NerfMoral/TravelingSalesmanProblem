@@ -1,13 +1,27 @@
 ﻿namespace TravelingSalesmanProblem
 {
+    enum Mode
+    {
+        FILE, RANDOM
+    }
     internal class GreedyTSP : TSP
     {
-        public GreedyTSP ()
+        public GreedyTSP (Mode mode)
         {
-            Init();
+            switch (mode) {
+                //case Mode.FILE:
+                //    Init(MatrixFromFile("Resources\\Matrix5.txt"));
+                //    break;
+                case Mode.RANDOM:
+                    Init(MatrixRndSym(5, 15));
+                    break;
+                default:
+                    throw new ArgumentException("No new Matrix Generated");
+            }
+
         }
 
-        private void Init ()
+        private void Init (int[,] matrix)
         {
             int sum = 0;
             int j = 0, i = 0;
@@ -16,7 +30,7 @@
             int start = i;
 
             //always a matrix with NxN dimensions (Adjacent matrix)
-            int[,] distances = MatrixRndSym(6, 12);
+            int[,] distances = matrix;
 
             List<int> visitedRouteList = new List<int>();
             visitedRouteList.Add(0);

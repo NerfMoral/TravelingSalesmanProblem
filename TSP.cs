@@ -36,5 +36,32 @@
             }
             return symMatrix;
         }
+        //static protected int[,] MatrixFromFile (string relativeFilePath)
+        //{
+
+        //    string path = GetFullPathByFilename(relativeFilePath);
+        //    using (StreamReader reader = new StreamReader(path)) {
+
+        //        string text = reader.ReadToEnd();
+        //        string[] lines = text.Split(Environment.NewLine);
+        //        int[,] symMatrix = new int[lines.Length, lines.Length];
+        //        for (int i = 0; i < lines.Length; i++) {
+
+        //            for (int j = i; j < lines.Length; j++) {
+        //                int tempint = ;
+        //                symMatrix[i, j] = randomInt;
+        //                symMatrix[j, i] = randomInt;
+        //            }
+        //        }
+        //    }
+
+        //}
+
+        /// <include file="XmlDocs/TSP.xml" path='doc/members/member[@name="GetFullPathByFilename"]/*' />
+        static private string GetFullPathByFilename (string fileName)
+        {
+            //Console.WriteLine("" + Directory.GetParent(Directory.GetCurrentDirectory()).Parent.Parent.FullName + "\\"+fileName);
+            return Directory.GetParent(Directory.GetCurrentDirectory()).Parent.Parent.FullName + "\\" + fileName;
+        }
     }
 }

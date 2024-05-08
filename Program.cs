@@ -4,7 +4,8 @@
     {
         static void Main (string[] args)
         {
-            GreedyTSP greedyTSP = new GreedyTSP();
+            GreedyTSP greedyTSP = new(Mode.RANDOM);
+
         }
     }
 }

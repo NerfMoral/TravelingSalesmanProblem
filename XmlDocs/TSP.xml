@@ -13,5 +13,9 @@
             <param name="n">Dimensions of the matrix</param>
             <param name="range">random numbers [1,range]</param>
         </member>
+        <member name="GetFullPathByFilename">
+            <summary>gets the full Path of the place the .sln is placed and appends the fileName to the end </summary>
+            <param name="fileName">Use any Slashes in this context with \\</param>
+        </member>
     </members>
 </doc>
